@@ -1,0 +1,104 @@
+#defaultPaymentTable > tbody > tr, #userInfoBlock, #addressBlock, #contactBlock, #paymentBlock {
+  display: none;
+}
+#defaultPaymentTable > tbody > tr:nth-child(20) {
+  display: block;
+}
+
+body, textarea, input, button, select {
+  font-family: Arial, Verdana, sans-serif;
+}
+
+tr, td {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.userInput input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 1px #dfdfdf;
+  cursor: auto;
+  -webkit-user-select: text;
+  font-size: 12px;
+  padding: 7px;
+}
+
+textarea:focus, input:focus{
+  outline: 0;
+}
+
+.userInput select {
+  height: 32px;
+  margin: 0;
+  top: 0;
+  background: transparent;
+  box-shadow: inset 1px 1px 1px #dfdfdf;
+  cursor: auto;
+  font-size: 12px;
+  padding: 7px;
+  vertical-align: middle;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+}
+
+td.userInput {
+  width: 877px;
+  padding-bottom: 15px;
+  display: block;
+}
+
+td.label {
+  height: auto;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+  font-weight: 700;
+  padding-bottom: 0;
+  display: block;
+}
+
+td.label label:after{
+  content: '*';
+}
+
+.userInputSpan2 {
+  width: 100%;
+}
+
+.userInputSmall {
+  width: 727px;
+}
+
+#cvdRow a {
+  color: #009090;
+  text-decoration: none;
+}
+
+#cardTypeRow span {
+  float: right;
+}
+
+select.userInputHalf {
+  margin-right: 24px;
+}
+
+table.mainTable {
+  width: 100%;
+  margin: 0;
+}
+
+.frm_box {
+  border-style: none;
+  background-color: transparent;
+}
+
+input#cancel {
+  display: none;
+}
