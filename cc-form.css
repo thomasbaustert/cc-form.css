@@ -1,7 +1,7 @@
 .credit_card_form {
   width: 100%;
   height: 450px;
-  border: 0;
+  border: 1px solid blue;
 }
 
 #defaultPaymentTable > tbody > tr, #userInfoBlock, #addressBlock, #contactBlock, #paymentBlock {
