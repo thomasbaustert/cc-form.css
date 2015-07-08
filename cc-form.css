@@ -106,3 +106,8 @@ table.mainTable {
 input#cancel {
   display: none;
 }
+
+input#send {
+  border: 1px solid blue;
+  font-size: 22px;
+}
