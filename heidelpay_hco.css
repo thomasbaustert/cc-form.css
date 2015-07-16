@@ -1,3 +1,14 @@
+/*
+ * Heidelpay hCO form CSS to make their form look like a form from XING.
+ *
+ * IMPORTANT!
+ * The hCO form is displayed inside an iframe of a XING page. The HTML delivered by Heidelpay and
+ * displayed in the iframe contains a stylesheet link to this file. Therefore this file must be
+ * available on its own and not be part of the asset pipeline.
+ * The link to this file is passed to Heidelpay via the parameter FRONTEND.CSS_PATH when creating
+ * a hCO session.
+ */
+
 #defaultPaymentTable {
   height: 440px;
 }
