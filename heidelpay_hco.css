@@ -97,7 +97,8 @@ td.label label:after{
 }
 
 #cardTypeRow span {
-  float: right;
+  display:inline-block;
+  margin-right: 20px;
 }
 
 select.userInputHalf {
