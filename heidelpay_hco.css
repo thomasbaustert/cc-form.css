@@ -114,6 +114,14 @@ table.mainTable {
   background-color: transparent;
 }
 
+.userInput select#brand {
+  width: 250px;
+}
+input#cardNumber,
+input#ccHolder {
+  width: 400px;
+}
+
 input#cancel {
   display: none;
 }
