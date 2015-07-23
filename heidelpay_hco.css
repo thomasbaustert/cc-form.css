@@ -25,7 +25,6 @@ table.bar {
 
 /* The button panel */
 table.mainTable {
-  display: block;
   width: 100%;
   margin: 0;
 }
