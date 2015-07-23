@@ -7,21 +7,35 @@
  * available on its own and not be part of the asset pipeline.
  * The link to this file is passed to Heidelpay via the parameter FRONTEND.CSS_PATH when creating
  * a hCO session.
+ *
+ * IMPORTANT!
+ * Make sure this file only contains CSS that is whitelisted by Heidelpay!
  */
 
-#defaultPaymentTable {
-  height: 440px;
-}
-
-#defaultPaymentTable > tbody > tr, #userInfoBlock, #addressBlock, #contactBlock, #paymentBlock {
+/* Hide everything except the credit card part */
+#debitCard, #directDebit, #contactBlock, #paymentBlock,
+#userInfoBlock, #addressBlock, #onlineTransfer, #prepayCard, #invoice,
+#prePayment, #userAccount, #virtualAccount, #notMandatoryRow,
+#spacer1, #spacer2, #spacer3, #spacer4 {
   display: none;
 }
-#defaultPaymentTable > tbody > tr:nth-child(20) {
+table.bar {
+  display: none;
+}
+
+/* The button panel */
+table.mainTable {
   display: block;
+  width: 100%;
+  margin: 0;
 }
 
 body, textarea, input, button, select {
   font-family: Arial, Verdana, sans-serif;
+}
+
+textarea:focus, input:focus{
+  outline: 0;
 }
 
 tr, td {
@@ -29,6 +43,26 @@ tr, td {
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+td.userInput {
+  width: 877px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+td.label {
+  height: auto;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+  font-weight: 700;
+  padding-bottom: 0;
+  display: block;
+}
+
+td.label label:after{
+  content: '*';
 }
 
 .userInput input {
@@ -45,10 +79,6 @@ tr, td {
   padding: 7px;
 }
 
-textarea:focus, input:focus{
-  outline: 0;
-}
-
 .userInput select {
   height: 32px;
   margin: 0;
@@ -61,26 +91,6 @@ textarea:focus, input:focus{
   vertical-align: middle;
   border: 1px solid #c8c8c8;
   border-radius: 2px;
-}
-
-td.userInput {
-  width: 877px;
-  padding-bottom: 15px;
-  display: block;
-}
-
-td.label {
-  height: auto;
-  font-size: 12px;
-  line-height: 18px;
-  color: #333333;
-  font-weight: 700;
-  padding-bottom: 0;
-  display: block;
-}
-
-td.label label:after{
-  content: '*';
 }
 
 .userInputSpan2 {
@@ -105,11 +115,6 @@ select.userInputHalf {
   margin-right: 24px;
 }
 
-table.mainTable {
-  width: 100%;
-  margin: 0;
-}
-
 .frm_box {
   border-style: none;
   background-color: transparent;
@@ -118,11 +123,13 @@ table.mainTable {
 .userInput select#brand {
   width: 250px;
 }
+
 input#cardNumber,
 input#ccHolder {
   width: 400px;
 }
 
+/* Hide Cancel button cause it does not work for XING */
 input#cancel {
   display: none;
 }
@@ -148,3 +155,15 @@ input#send {
   text-shadow: 0 1px 2px #f1fa02;
   white-space: nowrap;
 }
+
+/*
+ * Frontend error message
+ */
+.frontend_message_error {
+  text-align: left;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #bc100e;
+}
+
