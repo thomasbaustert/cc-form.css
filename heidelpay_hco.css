@@ -44,6 +44,10 @@ tr, td {
   padding-right: 0;
 }
 
+td {
+  text-align: left;
+}
+
 td.userInput {
   width: 877px;
   padding-bottom: 10px;
