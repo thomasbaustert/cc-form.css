@@ -159,7 +159,14 @@ input#cancel {
   margin-right:10px;
   background-color: #FFFFFF;
   background-image: none;
-  border-color: #DDDDDD;
+  border: none;
+  color: #009090;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow: none;
+}
+input#cancel:hover {
+  text-decoration: underline;
 }
 
 /*
