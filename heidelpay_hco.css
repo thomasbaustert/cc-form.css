@@ -156,6 +156,10 @@ input#send {
 }
 
 input#cancel {
+  margin-right:10px;
+  background-color: #FFFFFF;
+  background-image: none;
+  border-color: #dde87f #bbc280 #9cb800;
 }
 
 /*
