@@ -10,173 +10,183 @@
  *
  * IMPORTANT!
  * Make sure this file only contains CSS that is whitelisted by Heidelpay!
+ * See https://jira.xing.hh/jira/browse/HEI-311 or ask Heidelpay for the final document.
  */
+
+body {
+  color: #333;
+  font-size: 13px;
+  line-height: 1.38462;
+}
+
+body, textarea, label, input, select {
+  font-family: Arial, sans-serif;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 0 2px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+table {
+  width: 100% !important;
+}
+
+tr,
+td {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Remove border and background from frame box */
+.frm_box {
+  border-style: none;
+  background-color: transparent;
+  display: block;
+}
 
 /* Hide everything except the credit card part */
 #debitCard, #directDebit, #contactBlock, #paymentBlock,
 #userInfoBlock, #addressBlock, #onlineTransfer, #prepayCard, #invoice,
 #prePayment, #userAccount, #virtualAccount, #notMandatoryRow,
-#spacer1, #spacer2, #spacer3, #spacer4 {
-  display: none;
-}
-table.bar {
+#spacer1, #spacer2, #spacer3, #spacer4, table.bar {
   display: none;
 }
 
-/* The button panel */
-table.mainTable {
+/* overall table */
+.mainTable {
   width: 100%;
   margin: 0;
 }
 
-body, textarea, input, button, select {
-  font-family: Arial, Verdana, sans-serif;
-}
-
-textarea:focus, input:focus{
-  outline: 0;
-}
-
-tr, td {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-td {
-  text-align: left;
-}
-
-td.userInput {
-  width: 877px;
-  padding-bottom: 10px;
+/* show labels in own line */
+.frm_box .label {
   display: block;
 }
 
-td.label {
-  height: auto;
-  font-size: 12px;
-  line-height: 18px;
-  color: #333333;
-  font-weight: 700;
-  padding-bottom: 0;
-  display: block;
-}
-
-td.label label:after{
+/* display the required "*" signs */
+.frm_box .label label:after {
   content: '*';
 }
 
-.userInput input {
+.frm_box .userInput {
+  width: 100%;
+  display: block;
+}
+
+/* TODO handle */
+#cardTypeRow span {
+  display: none;
+}
+
+.frm_box input,
+.frm_box select {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: 1px solid #c9c9c9;
-  border-radius: 2px;
-  box-shadow: inset 1px 1px 1px #dfdfdf;
-  cursor: auto;
-  -webkit-user-select: text;
-  font-size: 12px;
-  padding: 7px;
-}
-
-.userInput select {
-  height: 32px;
-  margin: 0;
-  top: 0;
-  background: transparent;
-  box-shadow: inset 1px 1px 1px #dfdfdf;
-  cursor: auto;
-  font-size: 12px;
-  padding: 7px;
-  vertical-align: middle;
-  border: 1px solid #c8c8c8;
-  border-radius: 2px;
-}
-
-.userInputSpan2 {
+     -moz-appearance: none;
+  font-size: 13px;
+  line-height: 1.38462;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #b3b3b3;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333;
+  margin: 4px 0;
+  padding: 6px 12px;
   width: 100%;
 }
 
-.userInputSmall {
-  width: 727px;
+.frm_box input:hover,
+.frm_box select:hover {
+  border-color: #009090;
+}
+
+.frm_box select {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCA1MTEgNTExIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MS40MTQyMTsiPgogICAgPHBhdGggZD0iTTQ1Ny43MzQsMTQ4LjE3NkM0NTEuNTA1LDE0MS45NDggNDQxLjQxNSwxNDEuOTQ4IDQzNS4xODYsMTQ4LjE3NkwyNTUuMTIsMzI4LjI0M0w3NS4wNTQsMTQ4LjE3NkM2OC44MjUsMTQxLjk0OCA1OC43MzUsMTQxLjk0OCA1Mi41MDYsMTQ4LjE3NkM0Ni4yNzgsMTU0LjQwNSA0Ni4yNzgsMTY0LjQ5NSA1Mi41MDYsMTcwLjcyNEwyNDMuODQ2LDM2Mi4wNjRDMjQ2Ljk2MSwzNjUuMTc4IDI1MS4wNCwzNjYuNzM1IDI1NS4xMiwzNjYuNzM1QzI1OS4yLDM2Ni43MzUgMjYzLjI3OSwzNjUuMTc4IDI2Ni4zOTQsMzYyLjA2NEw0NTcuNzM0LDE3MC43MjRDNDYzLjk2MiwxNjQuNDk1IDQ2My45NjIsMTU0LjQwNSA0NTcuNzM0LDE0OC4xNzZaIiBzdHlsZT0iZmlsbDpyZ2IoMCwxNDQsMTQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KPC9zdmc+Cg==");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 14px 14px;
+}
+
+.frm_box #accountExpiryMonth {
+  float: left;
+  width: 49%;
+}
+
+.frm_box #accountExpiryYear {
+  box-sizing: border-box;
+  float: right;
+  width: 49%;
 }
 
 #cvdRow a {
   color: #009090;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.45455;
   text-decoration: none;
 }
 
-#cardTypeRow span {
-  display:inline-block;
-  margin-left: 30px;
-}
-
-select.userInputHalf {
-  margin-right: 24px;
-}
-
-.frm_box {
-  border-style: none;
-  background-color: transparent;
-}
-
-.userInput select#brand {
-  width: 250px;
-}
-
-input#cardNumber,
-input#ccHolder {
-  width: 400px;
-}
-
-input#cancel,
-input#send {
-  display: inline;
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  background-color: #e9f802;
-  background-image: linear-gradient(to bottom, #e9f802 0%, #cfdc00 50%, #bdd300 100%);
-  border-color: #dde87f #bbc280 #9cb800;
-  border-image: none;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  color: #333;
-  float: right;
-  font: bold 13px/15px Arial,Verdana,sans-serif;
-  margin: 0 0 10px;
-  padding: 5px 10px;
-  text-shadow: 0 1px 2px #f1fa02;
-  white-space: nowrap;
-}
-
-input#cancel {
-  margin-right:10px;
-  background-color: #FFFFFF;
-  background-image: none;
-  border: none;
-  color: #009090;
-  font-weight: normal;
-  text-decoration: none;
-  text-shadow: none;
-}
-input#cancel:hover {
+#cvdRow a:hover {
   text-decoration: underline;
 }
 
-/*
- * Frontend error message
- */
-.frontend_message_error {
-  text-align: left;
-  padding: 5px;
+input#send {
+  background: #e4f500;
+  background-image: linear-gradient(to bottom, #d9e800 0%, #c1cf00 100%);
+  border: 0;
+  border-radius: 3px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  color: #333;
+  cursor: pointer;
+  display: block;
   font-size: 13px;
-  font-weight: normal;
-  color: #bc100e;
+  font-weight: 700;
+  height: 32px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0 24px;
+  position: relative;
+  text-shadow: none;
 }
 
+input#send:hover {
+  background: #d9e800;
+  background-image: linear-gradient(to bottom, #e4f500 0%, #cfdc00 100%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+  text-decoration: none;
+}
+
+.mainTable .buttonarea,
+.mainTable .buttonRight {
+  display: inline-block;
+}
+
+#spacer4 + tr .mainTable tr {
+  display: block;
+  text-align: right;
+}
+
+input#cancel {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  color: #009090;
+  font-size: 13px;
+  line-height: 32px;
+  margin-right: 17px;
+  padding: 0;
+}
+
+input#cancel:hover {
+  text-decoration: underline;
+}
