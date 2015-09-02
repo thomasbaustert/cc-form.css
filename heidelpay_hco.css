@@ -45,11 +45,22 @@ td {
   text-align: left;
 }
 
+.frontend_message_error {
+  border-left: 10px solid #f33a58;
+  margin: 0 6px 8px 4px;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  text-align: left;
+  color: #333;
+}
+
 /* Remove border and background from frame box */
 .frm_box {
   border-style: none;
   background-color: transparent;
   display: block;
+  position: relative;
 }
 
 /* Hide everything except the credit card part */
@@ -103,13 +114,79 @@ td {
   width: 100%;
 }
 
+#cardTypeRow select,
+#expiryDateRow select {
+  background-color: transparent;
+}
+
+#expiryDateRow:before {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #009090;
+  content: "";
+  height: 0;
+  left: 46%;
+  margin-left: -7px;
+  margin-top: 34px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+#expiryDateRow:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+  content: "";
+  height: 0;
+  left: 46%;
+  margin-left: -7px;
+  margin-top: 17px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+#cardTypeRow .userInput:before,
+#expiryDateRow .userInput:before {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #009090;
+  content: "";
+  height: 0;
+  left: 95%;
+  margin-left: -5px;
+  margin-top: 18px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+#cardTypeRow .userInput:after,
+#expiryDateRow .userInput:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
+  content: "";
+  height: 0;
+  left: 95%;
+  margin-left: -5px;
+  margin-top: 17px;
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+#cardTypeRow .userInput:after {
+  margin-top: -23px;
+}
+
 .frm_box input:hover,
 .frm_box select:hover {
   border-color: #009090;
 }
 
 .frm_box select {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCA1MTEgNTExIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MS40MTQyMTsiPgogICAgPHBhdGggZD0iTTQ1Ny43MzQsMTQ4LjE3NkM0NTEuNTA1LDE0MS45NDggNDQxLjQxNSwxNDEuOTQ4IDQzNS4xODYsMTQ4LjE3NkwyNTUuMTIsMzI4LjI0M0w3NS4wNTQsMTQ4LjE3NkM2OC44MjUsMTQxLjk0OCA1OC43MzUsMTQxLjk0OCA1Mi41MDYsMTQ4LjE3NkM0Ni4yNzgsMTU0LjQwNSA0Ni4yNzgsMTY0LjQ5NSA1Mi41MDYsMTcwLjcyNEwyNDMuODQ2LDM2Mi4wNjRDMjQ2Ljk2MSwzNjUuMTc4IDI1MS4wNCwzNjYuNzM1IDI1NS4xMiwzNjYuNzM1QzI1OS4yLDM2Ni43MzUgMjYzLjI3OSwzNjUuMTc4IDI2Ni4zOTQsMzYyLjA2NEw0NTcuNzM0LDE3MC43MjRDNDYzLjk2MiwxNjQuNDk1IDQ2My45NjIsMTU0LjQwNSA0NTcuNzM0LDE0OC4xNzZaIiBzdHlsZT0iZmlsbDpyZ2IoMCwxNDQsMTQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KPC9zdmc+Cg==");
   background-repeat: no-repeat;
   background-position: right 6px center;
   background-size: 14px 14px;
