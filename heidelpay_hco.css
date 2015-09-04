@@ -203,6 +203,10 @@ td {
   width: 49%;
 }
 
+.frm_box input[name=verification] {
+  width: 12%;
+}
+
 #cvdRow a {
   color: #009090;
   font-size: 11px;
